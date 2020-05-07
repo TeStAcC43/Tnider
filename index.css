@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 800px) {
+	.row {
+		row-gap: 2rem;
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		justify-content: space-evenly;
+		width: 100vw;
+		padding: 0;
+		margin: 0;
+	}
+	.item {
+		margin: auto;
+	}
+}
+.Logo {
+	grid-column: span 4;
+	width: 20rem;
+	margin: auto;
+}
+#Tnider {
+	width: 100vw;
+}
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: blue;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.slider {
+	margin-top: 15px;
+	-webkit-appearance: none;
+	width: 100%;
+	background: #d3d3d3;
+	outline: none;
+	height: 10px;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
+@media only screen and (max-width: 800px) {
+	.row {
+		row-gap: 2rem;
+		display: grid;
+		grid-template-columns: auto;
+		justify-content: space-evenly;
+		width: 100vw;
+		padding: 0;
+		margin: 0;
+	}
+	.item {
+		width: 100%;
+	}
+}
