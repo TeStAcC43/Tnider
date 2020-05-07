@@ -16,14 +16,30 @@ window.addEventListener("click", () => {
   sound.play();
 });
 
+function checkall() {
+  check = document.getElementById('checkal');
+  checkbox = document.querySelectorAll('input[type=checkbox]');
+  for (i = 0; i < checkbox.length; i++)
+    checkbox[i].checked = true;
+
+}
+
+function uncheckall() {
+  check = document.getElementById('uncheck');
+  checkbox = document.querySelectorAll('input[type=checkbox]');
+  for (i = 0; i < checkbox.length; i++)
+    checkbox[i].checked = false;
+
+}
+
 $(function () {
   const $select = $(".year");
   const date = new Date();
-  for (i = 1; i <= date.getFullYear(); i++) {
+  for (i = 1; i <= date.getFullYear() - 18; i++) {
     $select.append($('<option></option>').val(i).html(i))
   }
   const $select2 = $(".month");
-  const month = [ "April", "August", "December", "February", "January", "July", "June", "March", "May", "November", "October", "September"]
+  const month = ["April", "August", "December", "February", "January", "July", "June", "March", "May", "November", "October", "September"]
   for (i = 0; i <= 11; i++) {
     $select2.append($(`<option></option>`).val(month[i]).html(month[i]))
   }
