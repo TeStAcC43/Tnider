@@ -23,8 +23,9 @@ $(function () {
     $select.append($('<option></option>').val(i).html(i))
   }
   const $select2 = $(".month");
-  for (i = 1; i <= 12; i++) {
-    $select2.append($('<option></option>').val(i).html(i))
+  const month = [ "April", "August", "December", "February", "January", "July", "June", "March", "May", "November", "October", "September"]
+  for (i = 0; i <= 11; i++) {
+    $select2.append($(`<option></option>`).val(month[i]).html(month[i]))
   }
   const $select3 = $(".day");
   for (i = 1; i <= 31; i++) {

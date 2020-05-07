@@ -3,7 +3,7 @@
 
 <head>
   <title>Tnider</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0;">
   <meta charset="UTF-8">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -12,43 +12,111 @@
 </head>
 
 <body>
-  <audio autoplay random loop>
+  <!-- <audio autoplay random loop>
     <source src="./music/HEYYEYAAEYAAAEYAEYAA.mp3" type="audio/mp3">
     <source src="./music/EEEAAAOOO.mp3" type="audio/mp3">
-  </audio>
+  </audio> -->
   <div class="row">
     <img src="./Untitled.png" alt="Tnider" class="Logo">
     <form class="row" id="Tnider" onsubmit="Submit()">
-      <label for="name" class="item">What's your name? ;)</label>
-      <input type="text" id="name" class="item">
-      <label for="sname" class="item">What's your last name? (;</label>
-      <input type="text" id="sname" class="item">
+      <label for="name" class="item">What's your name?</label>
+      <input type="text" id="name" class="item" value="...Placeholder">
+      <label for="sname" class="item">What's your last name?</label>
+      <input type="text" id="sname" class="item" value="...Placeholder">
 
-      <label for="age" class="item">What's your age? ;)</label>
-      <div class="item" style="display:flex">
+      <label for="age" class="item">What's your age?</label>
+      <div class="item" style="display:flex; width:90%; margin:auto;">
         <div style="width:24px; padding:auto; margin-top:10px; float:left;">
           <output name="ageOutputName" id="ageOutputId">125</output>
         </div>
         <input type="range" class="slider" name="ageInputName" id="ageInputId" value="125" min="0" max="250"
-          oninput="ageOutputId.value = ageInputId.value">
+          onchange="ageOutputId.value = ageInputId.value">
       </div>
 
-      <label class="item">What's your date of birth? (;</label>
-      <div>
+      <label class="item">What's your date of birth?</label>
+      <div class="item">
         <label>Year</label>
         <select id="year" class="year"></select>
         <label>Month</label>
         <select id="day" class="day"></select>
-        <label>day</label>
+        <label>Day</label>
         <select id="month" class="month"></select>
       </div>
 
-      <label >What's your favorite food</label>
-      <div class="item">
+      <label class="item">What's your favorite food</label>
+      <div class="item crayon">
         <label for="sand" style="float:left;">Crayon</label>
-      <input id="crayons" style="float:left;" name="crayon" type="radio">
-      <label for="crayons" style="float:right;">Sand</label>
-      <input type="radio" style="float:right;" name="crayon" id="sand">  
+        <input id="crayons" style="float:left;" name="crayon" type="radio">
+        <label for="crayons" style="float:right;">Sand</label>
+        <input type="radio" style="float:right;" name="crayon" id="sand">
+      </div>
+
+      <div class="item" style="grid-column: span 2; display:block;">
+        <div style="width:100; padding:2rem; text-align:center;">
+          Chosoe 5 interests
+        </div>
+        <div class="row2">
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+          <input type="checkbox" name="" id="" checked>
+          <label for=""></label>
+        </div>
       </div>
     </form>
   </div>
