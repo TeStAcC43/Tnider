@@ -5,6 +5,7 @@
   <title>Tnider</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0;">
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="./Untitled.png">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -12,43 +13,42 @@
 </head>
 
 <body>
+  <div id="modal" class="modal">
+    <div class="modal-content" style="justify-content: center; text-align:center">
+      <span class="close">&times;</span>
+      <div style="margin:auto; width:250px;">
+        <img src="./geh.jpg" width="250px" height="250px" alt="geh">
+      </div>
+      <p>Thank you for submitting the form</p>
+    </div>
+  </div>
   <audio autoplay random loop>
     <source src="./music/HEYYEYAAEYAAAEYAEYAA.mp3" type="audio/mp3">
-    <source src="./music/EEEAAAOOO.mp3" type="audio/mp3">
   </audio>
   <div class="row">
     <img src="./Untitled.png" alt="Tnider" class="Logo">
     <form class="row" id="Tnider" onsubmit="Submit()">
+
       <label for="name" class="item">What's your name?</label>
-      <input type="text" id="name" class="item" value="...Placeholder">
-      <label for="sname" class="item">What's your last name?</label>
-      <input type="text" id="sname" class="item" value="...Placeholder">
+      <input type="text" id="name" class="item" name="name" value="...Placeholder">
 
       <label for="age" class="item">What's your age?</label>
       <div class="item" style="display:flex; width:90%; margin:auto;">
         <div style="width:24px; padding:auto; margin-top:10px; float:left;">
-          <output name="ageOutputName" id="ageOutputId">125</output>
+          <output name="age" id="ageOutputId">125</output>
         </div>
-        <input type="range" class="slider" name="ageInputName" id="ageInputId" value="125" min="0" max="250"
-          onchange="ageOutputId.value = ageInputId.value">
+        <input type="range" class="slider" name="age" id="ageId" value="125" min="0" max="250"
+          onchange="ageOutputId.value = ageId.value">
       </div>
 
       <label class="item">What's your date of birth?</label>
-      <div class="item">
+      <div class="item" style="margin:auto">
         <label>Year</label>
-        <select id="year" class="year"></select>
+        <select id="year" name="year" class="year"></select>
         <label>Monht</label>
-        <select id="day" class="day"></select>
+        <select id="day" name="day" class="day"></select>
         <label>Day</label>
-        <select id="month" class="month"></select>
-      </div>
-
-      <label class="item">What's your favorite food?</label>
-      <div class="item crayon">
-        <label for="sand" style="float:left;">Crayon</label>
-        <input id="crayons" style="float:left;" name="crayon" type="radio">
-        <label for="crayons" style="float:right;">Sand</label>
-        <input type="radio" style="float:right;" name="crayon" id="sand">
+        <select id="month" name="month" class="month"></select>
       </div>
 
       <div class="item" style="grid-column: span 2; display:block;">
@@ -56,68 +56,92 @@
           Choose 5 interests
         </div>
         <div class="row2">
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Reading</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Painting</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Dancing</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Dancing</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Dancing</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Acting</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Photography</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Gaming</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Rollerblading</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Running</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Cooking</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Swimming</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Sewing</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Yoga</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Hiking</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Cosplaying</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Cycling</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Sailing</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Billiard</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Volunteering</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Photoshopping</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Playing guitar</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Meditating</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Traveling</label>
-          <input type="checkbox" name="" id="checkal" checked onclick="checkall()">
-          <label for="">Check all</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Wine tasting</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Watching movies</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Designing</label>
-          <input type="checkbox" name="" id="uncheck" checked onclick="uncheckall()">
-          <label for="">Uncheck all</label>
-          <input type="checkbox" name="" id="" checked>
-          <label for="">Camping</label>
+          <input type="checkbox" name="reading" id="reading" checked>
+          <label for="reading">Reading</label>
+          <input type="checkbox" name="painting" id="painting" checked>
+          <label for="painting">Painting</label>
+          <input type="checkbox" name="dancing" id="dancing" checked>
+          <label for="dancing">Dancing</label>
+          <input type="checkbox" name="acting" id="acting" checked>
+          <label for="acting">Acting</label>
+          <input type="checkbox" name="photography" id="photography" checked>
+          <label for="photography">Photography</label>
+          <input type="checkbox" name="gaming" id="gaming" checked>
+          <label for="gaming">Gaming</label>
+          <input type="checkbox" name="rollerblading" id="rollerblading" checked>
+          <label for="rollerblading">Rollerblading</label>
+          <input type="checkbox" name="running" id="running" checked>
+          <label for="running">Running</label>
+          <input type="checkbox" name="cooking" id="cooking" checked>
+          <label for="cooking">Cooking</label>
+          <input type="checkbox" name="swimming" id="swimming" checked>
+          <label for="swimming">Swimming</label>
+          <input type="checkbox" name="sweing" id="sweing" checked>
+          <label for="sweing">Sewing</label>
+          <input type="checkbox" name="yoga" id="yoga" checked>
+          <label for="yoga">Yoga</label>
+          <input type="checkbox" name="hiking" id="hiking" checked>
+          <label for="hiking">Hiking</label>
+          <input type="checkbox" name="cosplaying" id="cosplaying" checked>
+          <label for="cosplaying">Cosplaying</label>
+          <input type="checkbox" name="cycling" id="cycling" checked>
+          <label for="cycling">Cycling</label>
+          <input type="checkbox" name="sailing" id="sailing" checked>
+          <label for="sailing">Sailing</label>
+          <input type="checkbox" name="billiard" id="billiard" checked>
+          <label for="billiard">Billiard</label>
+          <input type="checkbox" name="volunteering" id="volunteering" checked>
+          <label for="volunteering">Volunteering</label>
+          <input type="checkbox" name="photoshopping" id="photoshopping" checked>
+          <label for="photoshopping">Photoshopping</label>
+          <input type="checkbox" name="guitar" id="guitar" checked>
+          <label for="guitar">Playing guitar</label>
+          <input type="checkbox" name="meditating" id="meditating" checked>
+          <label for="meditating">Meditating</label>
+          <input type="checkbox" name="traveling" id="traveling" checked>
+          <label for="traveling">Traveling</label>
+          <input type="checkbox" name="wine" id="wine" checked>
+          <label for="wine">Wine tasting</label>
+          <input type="checkbox" name="checkal" id="checkal" checked onclick="checkall()">
+          <label for="checkal">Check all</label>
+          <input type="checkbox" name="movies" id="movies" checked>
+          <label for="movies">Watching movies</label>
+          <input type="checkbox" name="designing" id="designing" checked>
+          <label for="designing">Designing</label>
+          <input type="checkbox" name="camping" id="camping" checked>
+          <label for="camping">Camping</label>
+          <input type="checkbox" name="uncheck" id="uncheck" checked onclick="uncheckall()">
+          <label for="uncheck" onclick="uncheckall()">Uncheck all</label>
         </div>
       </div>
+      <label class="item" style="margin:auto; padding:1rem 0;">Tell me about yourself</label>
+      <textarea name="about" style="width:90%; resize:none; margin:auto; margin-bottom:1rem; transform:scaleX(-1)"
+        class="item" id="about" cols="30" rows="5"></textarea>
+      <label class="item" style="margin:auto; padding:1rem 0;">Top 5 favorite songs?</label>
+      <textarea name="top5 Songs" style="width:90%; resize:none;  margin:auto; margin-bottom:1rem; transform:scaleY(-1)"
+        class="item" id="top5 Songs" cols="30" rows="5"></textarea>
+      <label class="item" style="margin:auto; padding:1rem 0;">What's your shower taughts?</label>
+      <textarea style="width:90%; margin:auto; resize:none;  margin-bottom:1rem;" class="item" name="showerTaughts"
+        id="showerTaughts" cols="30" rows="5"></textarea>
+
+      <label class="item" style="margin:auto; padding:1rem 0;">This is a free space, feel free to type anything!</label>
+      <textarea style="width:90%; margin:auto; resize:none;  margin-bottom:1rem;" class="item" name="free" id="free"
+        cols="30" rows="5"></textarea>
+
+      <div id="error" style="color:red; text-align: center;"></div>
+
+      <div class="item" style="margin:auto; display:flex; grid-column:span 4;">
+        <label for="consent">
+          <h4 style="margin:auto; padding:0.1rem;">I consent that entered data will be sent and stored</h4>
+        </label>
+        <input id="consent" name="consent" type="checkbox">
+      </div>
+      <input style="width:80%; margin-bottom:2rem; height:3rem; grid-column: span 4; margin:0.25rem auto 2rem auto; background-color: #4CAF50; 
+      color: white;
+      outline:none;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;" class="item" id="submit" type="submit" disabled>
     </form>
   </div>
   <script src="script.js">
