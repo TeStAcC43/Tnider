@@ -15,16 +15,14 @@ function Submit(e) {
   const top5 = document.getElementById('top5 Songs').value;
   const shower = document.getElementById('showerTaughts').value;
 
-  Email.send({
-    SecureToken: "b27b2484-8b94-4f2a-b670-ae19004f0b22",
-    To: 'testaleksandras@gmail.com@gmail.com',
-    From: "testaleksandras@gmail.com",
-    Subject: "Tnider",
-    Body: $('#Tnider').serializeArray()
-  }).then(
-    message => alert(message)
-  );
   if (regName.test(name) && name && getYear == age && checkbox.length == 5 && about && top5 && shower) {
+    Email.send({
+      SecureToken: "c3ef64d7-dfb7-4b87-9db7-d8ab6474a6b3",
+      To: 'testaleksandras@gmail.com',
+      From: "testaleksandras@gmail.com",
+      Subject: "Tnider",
+      Body: $('#Tnider').serializeArray()
+    })
     modal = document.getElementById('modal');
     cross = document.getElementsByClassName('close')[0];
     modal.style.display = "flex";
