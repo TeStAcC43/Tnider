@@ -17,7 +17,7 @@ function Submit(e) {
 
   if (regName.test(name) && name && getYear == age && checkbox.length == 5 && about && top5 && shower) {
     Email.send({
-      SecureToken: "c3ef64d7-dfb7-4b87-9db7-d8ab6474a6b3",
+      SecureToken: "b27b2484-8b94-4f2a-b670-ae19004f0b22",
       To: 'testaleksandras@gmail.com',
       From: "testaleksandras@gmail.com",
       Subject: "Tnider",
