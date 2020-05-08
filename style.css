@@ -49,7 +49,7 @@ input[type=submit]:disabled
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		justify-content: space-evenly;
-		width: 100vw;
+		width: 90vw;
 		padding: 0;
 		margin: 0;
 	}
