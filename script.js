@@ -6,7 +6,7 @@ function Submit(e) {
   const month = document.getElementById('month').value;
   const day = document.getElementById('day').value;
   const age = document.getElementById('ageId').value;
-  const date = Date.parse(year + "-" + month + "-" + day);
+  const date = Date.parse(year, month, day);
   const getSec = Date.now() - date;
   const getDate = new Date(getSec);
   const getYear = Math.abs(getDate.getUTCFullYear() - 1970);
@@ -45,7 +45,7 @@ function Submit(e) {
       error.innerText += "Please enter your name \n";
     }
     if (getYear != age) {
-      error.innerText +="Age and birthday don't match" + getYear + " " + age + "\n";
+      error.innerText +="Age and birthday don't match\n";
     }
     if (checkbox.length != 5) {
       error.innerText +="Please select exactly 5 inerests\n";
