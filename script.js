@@ -45,6 +45,7 @@ function Submit(e) {
       error.innerText += "Please enter your name \n";
     }
     if (getYear != age) {
+      alert(getYear, age);
       error.innerText +="Age and birthday don't match\n ";
     }
     if (checkbox.length != 5) {
