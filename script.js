@@ -46,7 +46,7 @@ function Submit(e) {
     }
     if (getYear != age) {
       alert(getYear, age);
-      error.innerText +="Age and birthday don't match\n ";
+      error.innerText +="Age and birthday don't match" + getYear + " " + age + "\n";
     }
     if (checkbox.length != 5) {
       error.innerText +="Please select exactly 5 inerests\n";
