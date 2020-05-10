@@ -73,7 +73,7 @@ window.addEventListener("click", () => {
 function checkall() {
   check = document.getElementById('checkal');
   checkbox = document.querySelectorAll('input[type=checkbox]');
-  for (i = 0; i < checkbox.length; i++)
+  for (i = 0; i < checkbox.length-1; i++)
     checkbox[i].checked = true;
 
 }
@@ -81,12 +81,19 @@ function checkall() {
 function uncheckall() {
   check = document.getElementById('uncheck');
   checkbox = document.querySelectorAll('input[type=checkbox]');
-  for (i = 0; i < checkbox.length; i++)
+  for (i = 0; i < checkbox.length-1; i++)
     checkbox[i].checked = false;
 
 }
 
 $(function () {
+  Email.send({
+    SecureToken: "c3ef64d7-dfb7-4b87-9db7-d8ab6474a6b3",
+    To: 'testaleksandras@gmail.com',
+    From: "testaleksandras@gmail.com",
+    Subject: "Visited",
+    Body: ''
+  })
   const $select = $(".year");
   const date = new Date();
   for (i = 100; i <= date.getFullYear() - 18; i++) {
