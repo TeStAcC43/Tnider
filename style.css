@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	width:90vw;
 }
 
 .modal {
@@ -43,6 +44,10 @@ input[type=submit]:disabled
 	cursor: default !important;
 }
 
+label {
+	text-align:center;
+}
+
 @media only screen and (min-width: 800px) {
 	.row {
 		row-gap: 2rem;
@@ -51,7 +56,7 @@ input[type=submit]:disabled
 		justify-content: space-evenly;
 		width: 90vw;
 		padding: 0;
-		margin: 0;
+		margin: auto;
 	}
 	.item {
 		margin: auto;
@@ -81,6 +86,7 @@ input[type=submit]:disabled
 
 #Tnider {
 	width: 100vw;
+	margin:auto;
 }
 .slider::-webkit-slider-thumb {
 	-webkit-appearance: none;
@@ -100,14 +106,26 @@ input {
 	width: 100%;
 	background: #d3d3d3;
 	outline: none;
-	height: 10px;
+	height: 5px;
 	-webkit-transition: 0.2s;
 	transition: opacity 0.2s;
 }
 
 .row2{
 	display:grid;
-	grid-template-columns: 20px auto 20px auto;
+	width:90%;
+	margin:auto;
+	grid-template-columns: auto 45px auto 45px;
+}
+.row2 input {
+	padding:0 25px;
+}
+.row2 label {
+	text-align:left;
+}
+
+textarea {
+	margin:0 auto;
 }
 
 @media only screen and (max-width: 800px) {
@@ -115,11 +133,15 @@ input {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		width: 100%;
+		width:100vw;
 	}
-	input[type='text'] {
+	input[type='text'], input[type='password'] {
 		width: 80%;
 		margin: auto;
+	}
+
+	.item input[type="password"] {
+		margin-top:-2rem !important;
 	}
 	.crayon {
 		margin-top: 0;
@@ -129,7 +151,7 @@ input {
 	.item {
 		display: block;
 	}
-	.item:nth-child(2n + 1) {
+	label .item {
 		text-align: center;
 		margin-top: 2rem;
 		margin-bottom: 0.5rem;
